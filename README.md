@@ -26,11 +26,6 @@ Download this repo and copy the MPC_SwiftBrowserViewController.swift and MPC_Swi
   2. Push the browser onto your navigation stack
 
   For example navigationController?.pushViewController(browswer, animated: true)
- 
-  3. Display the alert view: if (alert) [alert display]; Do not add this alert to your own hierarchy. The alert will do everything for you.
-
-  4. For a delegate callback on tap or pan gestures, subscribe to the delegate <MPC_NotificationDelegate>. Set the delegate on the instantiated view: myNotification.delegate = self. Then implement the delegate method -(void)userDidTapMPC_NotificationView:
-
 
 
 <h3>Version Update History:</h3>
