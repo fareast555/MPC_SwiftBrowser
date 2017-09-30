@@ -47,4 +47,5 @@ Copy the MPC_SwiftBrowserViewController.swift and MPC_SwiftBrowserViewController
 
 <h3>Version Update History:</h3>
   ~> 1.0.1 Working version pushed to git 30 Sept 2017. 
+  
   ~> 1.0.1 Navigation tool bar, custom title, embedded form pushed 1 Oct 2017.
