@@ -23,7 +23,7 @@ Copy the MPC_SwiftBrowserViewController.swift and MPC_SwiftBrowserViewController
   1. Create an instance of the browser, passing the urlString of the page you wish to view as an argument in the custom initializer. This urlString is the only required parameter in the init method. All others can be left out if not needed. 
 
   So the simplest use case would be:
-     let browser = MPC_SwiftBrowserViewController(urlString:"http://myURL.com")
+  * let browser = MPC_SwiftBrowserViewController(urlString:"http://myURL.com")
 
 
   Other parameters are:
@@ -33,16 +33,16 @@ Copy the MPC_SwiftBrowserViewController.swift and MPC_SwiftBrowserViewController
 
 
   If embedded in a container, there is no need to pass the tab bar or title arguments. See the secondViewController file if you need to see how to create a container view programmatically. The embedded use case would be:
-     let browser = MPC_SwiftBrowserViewController(urlString:"http://myURL.com", embeddedInFrame:myContainer.frame)
+  * let browser = MPC_SwiftBrowserViewController(urlString:"http://myURL.com", embeddedInFrame:myContainer.frame)
 
 
   If pushing the view, the most complex use case might be something like:
-     let browser = MPC_SwiftBrowserViewController(urlString:"http://myURL.com", coversTabBar:true, pageTitle:"My page title")
+  * let browser = MPC_SwiftBrowserViewController(urlString:"http://myURL.com", coversTabBar:true, pageTitle:"My page title")
   
  
   2. Push the browser onto your navigation stack (if not the embedded case)
 
-  For example navigationController?.pushViewController(browswer, animated: true)
+  * navigationController?.pushViewController(browswer, animated: true)
 
 
 <h3>Version Update History:</h3>
