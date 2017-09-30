@@ -10,9 +10,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPC_SwiftBrowserViewController" customModule="BullsEye" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPC_SwiftBrowserViewController" customModule="MPC_SwiftBrowser" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="XW2-Ub-fFG" id="87Y-Ux-d8i"/>
+                <outlet property="forwardButton" destination="et7-gK-8h7" id="eyA-f7-Pkv"/>
                 <outlet property="loadProgress" destination="Bhf-Kw-2rC" id="a5s-DV-MXU"/>
+                <outlet property="toolBar" destination="dOD-Bk-uqz" id="GQ3-n8-JGS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,11 +30,30 @@
                         <constraint firstAttribute="height" constant="4" id="VBy-fo-2LK"/>
                     </constraints>
                 </progressView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOD-Bk-uqz">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem title="&lt;" id="XW2-Ub-fFG">
+                            <connections>
+                                <action selector="goBack:" destination="-1" id="7s8-FM-XLn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="60" systemItem="fixedSpace" id="6ZF-WD-sS0"/>
+                        <barButtonItem title="&gt;" id="et7-gK-8h7">
+                            <connections>
+                                <action selector="goForward:" destination="-1" id="wyj-WS-VBK"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Bhf-Kw-2rC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aaH-XM-ee4"/>
+                <constraint firstItem="dOD-Bk-uqz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ceP-qZ-Hr6"/>
                 <constraint firstAttribute="trailing" secondItem="Bhf-Kw-2rC" secondAttribute="trailing" id="r3l-7v-mMP"/>
+                <constraint firstItem="dOD-Bk-uqz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="vbY-uc-GeW"/>
+                <constraint firstItem="dOD-Bk-uqz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wAh-O7-Zd2"/>
                 <constraint firstItem="Bhf-Kw-2rC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yRf-z4-MX1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

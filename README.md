@@ -19,14 +19,27 @@ Download this repo and copy the MPC_SwiftBrowserViewController.swift and MPC_Swi
  
 <h3>To use:</h3>
  
-  1. Create an instance of the browser passing the urlString of the page you wish to view, and setting the flag for whether the browser should hide the tab bar or not (Set to false if not using a tab bar controller)
+  1. Create an instance of the browser passing the urlString of the page you wish to view. This urlString is the only required parameter in the init method. All others can be left out if not using. 
 
-  For example let browser = MPC_SwiftBrowserViewController(urlString:"http://myURL.com", coversTabBar:true)
+  So the simplest use case would be MPC_SwiftBrowserViewController(urlString:"http://myURL.com")
+
+  Other parameters are:
+  * coversTabBar (will push the view above the tab bar)
+  * pageTitle (set this is you want your own web page title. Else, the downloaded page will be used)
+  * embeddedInFrame  Pass the CGRect frame of the container if you are showing the browser in a container view
+
+  If embedded in a container, there is no need to pass the tab bar or title arguments. See the secondViewController file if you need to see how to create a container view programmatically
+  MPC_SwiftBrowserViewController(urlString:"http://myURL.com", embeddedInFrame:myContainer.frame)
+
+  If pushing the view, the most complex use case might be something like
+  MPC_SwiftBrowserViewController(urlString:"http://myURL.com", coversTabBar:true, pageTitle:"My page title")
+  
  
-  2. Push the browser onto your navigation stack
+  2. Push the browser onto your navigation stack (if not the embedded case)
 
   For example navigationController?.pushViewController(browswer, animated: true)
 
 
 <h3>Version Update History:</h3>
-  ~> 1.0.1 Working version pushed to git 30 Sept 2017
+  ~> 1.0.1 Working version pushed to git 30 Sept 2017. 
+  ~> 1.0.1 Navigation tool bar, custom title, embedded form pushed 1 Oct 2017.

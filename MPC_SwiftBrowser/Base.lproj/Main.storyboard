@@ -4,13 +4,14 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pushed-->
+        <!--Pushed View-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="MPC_SwiftBrowser" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,34 +20,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnz-5b-km5" userLabel="Show page covering tab bar">
-                                <rect key="frame" x="90.5" y="252" width="194" height="30"/>
-                                <state key="normal" title="Show Page Covering tab bar"/>
+                                <rect key="frame" x="66" y="181" width="244" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Web page covering tab bar"/>
                                 <connections>
                                     <action selector="pushPageCoverTabBar:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ltY-wq-kQs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOG-M0-VzJ" userLabel="Show page with tab bar">
-                                <rect key="frame" x="131" y="321.5" width="112" height="30"/>
-                                <state key="normal" title="Show Page With"/>
+                                <rect key="frame" x="78" y="269" width="218" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Web page under tab bar"/>
                                 <connections>
                                     <action selector="pushPageUnderTabBar:" destination="9pv-A4-QxB" eventType="touchUpInside" id="DVE-NV-TCt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wds-ap-jM8" userLabel="Show page with tab bar">
+                                <rect key="frame" x="64.5" y="357" width="246" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Web page with custom title"/>
+                                <connections>
+                                    <action selector="pushPageWithTitle:" destination="9pv-A4-QxB" eventType="touchUpInside" id="8fL-9R-yCC"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vOG-M0-VzJ" firstAttribute="top" secondItem="vnz-5b-km5" secondAttribute="bottom" constant="39.5" id="Rws-cN-M22"/>
-                            <constraint firstItem="vnz-5b-km5" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" multiplier="0.8" id="af9-tO-SzV"/>
+                            <constraint firstItem="vOG-M0-VzJ" firstAttribute="top" secondItem="vnz-5b-km5" secondAttribute="bottom" constant="50" id="Rws-cN-M22"/>
+                            <constraint firstItem="vnz-5b-km5" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" multiplier="0.6" id="af9-tO-SzV"/>
+                            <constraint firstItem="wds-ap-jM8" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="eVN-pV-XkH"/>
                             <constraint firstItem="vnz-5b-km5" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="hu4-bX-7CX"/>
+                            <constraint firstItem="wds-ap-jM8" firstAttribute="top" secondItem="vOG-M0-VzJ" secondAttribute="bottom" constant="50" id="kL0-SZ-fxA"/>
                             <constraint firstItem="vOG-M0-VzJ" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="yGp-23-iJZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Pushed" id="NGR-F5-4su"/>
+                    <navigationItem key="navigationItem" title="Pushed View" id="NGR-F5-4su"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="-321"/>
+            <point key="canvasLocation" x="1533.5999999999999" y="-321.58920539730138"/>
         </scene>
         <!--Container -->
         <scene sceneID="wg7-f3-ORb">
@@ -56,34 +69,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="87" y="312" width="201.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Moi-Do-Lsd">
+                                <rect key="frame" x="37" y="118" width="300" height="350"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="4e4-mS-UzL"/>
+                                    <constraint firstAttribute="height" constant="350" id="MEc-tS-c3Q"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJb-H5-FkS">
+                                <rect key="frame" x="37" y="488" width="300" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ndf-7f-wqG"/>
+                                </constraints>
+                                <string key="text">This browser requires a custom init, so add a normal UIView to storyboard or your xib. See the code in this project as an example of how to add a container view programmatically.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Container View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd0-CF-9YY">
+                                <rect key="frame" x="37" y="9" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Qhz-ZQ-me7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.2502441406" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="Moi-Do-Lsd" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="66Z-GG-GfI"/>
+                            <constraint firstItem="sJb-H5-FkS" firstAttribute="top" secondItem="Moi-Do-Lsd" secondAttribute="bottom" constant="20" id="Jct-3F-bZa"/>
+                            <constraint firstItem="sJb-H5-FkS" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="QQH-1g-ncD"/>
+                            <constraint firstItem="cd0-CF-9YY" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="UWC-cg-zcH"/>
+                            <constraint firstItem="cd0-CF-9YY" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="40" id="fqM-16-t9E"/>
+                            <constraint firstItem="Moi-Do-Lsd" firstAttribute="top" secondItem="cd0-CF-9YY" secondAttribute="bottom" constant="35" id="z7G-ed-Z1T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Container " image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="containter" destination="Moi-Do-Lsd" id="VUO-ti-Jea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="748" y="366"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

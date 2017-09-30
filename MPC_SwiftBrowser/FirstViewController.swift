@@ -10,12 +10,6 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-  }
-
 
   @IBAction func pushPageCoverTabBar(_ sender: Any) {
     pushBrowser(coversTabBar: true)
@@ -25,17 +19,22 @@ class FirstViewController: UIViewController {
     pushBrowser(coversTabBar: false)
   }
   
+  @IBAction func pushPageWithTitle(_ sender:Any) {
+    pushBrowser(coversTabBar: true, title: "My Web Page")
+  }
   
-  func pushBrowser(coversTabBar:Bool)
+  
+  func pushBrowser(coversTabBar:Bool = false, title:String = "")
   {
-    navigationController?.navigationBar.isTranslucent = true
+    //Instantiate the browswer. The urlString is the only required argument. The others are optional.
+    //If no page title is passed, the browswer will detect and present the title of the page
+    //being downloaded
     
-    print("BOOL check - Bool shows as \(navigationController!.navigationBar.isTranslucent ? "YES":"NO")")
-    
-    let browswer = MPC_SwiftBrowserViewController(urlString: "https://asiatravelbug.net", coversTabBar:coversTabBar)
-    
+    let browswer = MPC_SwiftBrowserViewController(urlString: "https://asiatravelbug.net",
+                                                  coversTabBar: coversTabBar,
+                                                  pageTitle:title)
+    //Push onto the existing stack
     navigationController?.pushViewController(browswer, animated: true)
-    
   }
 
 }
