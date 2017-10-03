@@ -6,6 +6,8 @@ For best results, push this browser onto your navigation stack (i.e., your proje
 
 The browser will temporarily set your navigation bar to opaque so that the progress bar shows correctly. It resets the bar back to the original translucency when the browser is dismissed.
 
+When I get around to it, I'll add an optional share button etc to the toolbar. 
+
 
 ## Requirements
 
@@ -44,8 +46,12 @@ Copy the MPC_SwiftBrowserViewController.swift and MPC_SwiftBrowserViewController
 
   * navigationController?.pushViewController(browswer, animated: true)
 
+## Extending Functionality
+This brower class is a final class, and is not meant to be subclassed. Feel free, however, to extend it. At the end of the class is an extension with a sample public func that would change the navBar tint color if called.
 
 <h3>Version Update History:</h3>
   ~> 1.0.1 Working version pushed to git 30 Sept 2017. 
   
   ~> 1.0.1 Navigation tool bar, custom title, embedded form pushed 1 Oct 2017.
+  
+  ~> 1.0.1 Class extension stub pushed 1 Oct 2017.

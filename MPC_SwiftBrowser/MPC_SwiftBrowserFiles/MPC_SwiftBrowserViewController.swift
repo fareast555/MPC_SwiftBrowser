@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import QuartzCore
 
-class MPC_SwiftBrowserViewController: UIViewController, WKNavigationDelegate {
+final class MPC_SwiftBrowserViewController: UIViewController, WKNavigationDelegate {
 
   //Outlets
   @IBOutlet weak var loadProgress: UIProgressView!
@@ -33,6 +33,7 @@ class MPC_SwiftBrowserViewController: UIViewController, WKNavigationDelegate {
   
   //Only the urlString is required
   convenience init(urlString:String, coversTabBar:Bool = false, pageTitle:String = "", embeddedInFrame:CGRect = CGRect.zero) {
+    
     self.init()
     
     //Set the NSURL from the passed string
@@ -230,4 +231,19 @@ class MPC_SwiftBrowserViewController: UIViewController, WKNavigationDelegate {
   
 } //END
 
+extension MPC_SwiftBrowserViewController {
+  
+  //Add any extending functions here. For example, uncomment the following code
+  //and call it AFTER you have pushed the browerer onto your navigation stack to
+  //change the tint color of the nav bar (the back button color etc)
+  
+  /*
+  public func changeNavBarTintColorTo(_ color:UIColor)
+  {
+      if navigationController?.navigationBar != nil {
+        navigationController?.navigationBar.tintColor = color
+      }
+  }
+  */
+}
 

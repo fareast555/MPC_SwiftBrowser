@@ -30,11 +30,12 @@ class FirstViewController: UIViewController {
     //If no page title is passed, the browswer will detect and present the title of the page
     //being downloaded
     
-    let browswer = MPC_SwiftBrowserViewController(urlString: "https://asiatravelbug.net",
+    let browser = MPC_SwiftBrowserViewController(urlString: "https://asiatravelbug.net",
                                                   coversTabBar: coversTabBar,
                                                   pageTitle:title)
+    
     //Push onto the existing stack
-    navigationController?.pushViewController(browswer, animated: true)
+    navigationController?.pushViewController(browser, animated: true)
   }
 
 }
