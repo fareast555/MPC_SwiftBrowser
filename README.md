@@ -53,9 +53,9 @@ Although it's a security risk, if you want your browser to be able to download i
 ```swift
 <key>NSAppTransportSecurity</key>
     <dict>
-    <key>NSAllowsArbitraryLoads</key>
-      <true/>
-  </dict>
+      <key>NSAllowsArbitraryLoads</key>
+         <true/>
+    </dict>
 ```
 
 ## Extending Functionality
