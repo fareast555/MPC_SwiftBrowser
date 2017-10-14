@@ -50,11 +50,13 @@ Copy the MPC_SwiftBrowserViewController.swift and MPC_SwiftBrowserViewController
 ## AppTransportSecurity
 Although it's a security risk, if you want your browser to be able to download images even from sites that are not https://, you'll need to override your NSAppTransportSecurityKey in your info.plist file (ctrl-click, open as > Source Code)
 
-#  <key>NSAppTransportSecurity</key>
-#    <dict>
-#    <key>NSAllowsArbitraryLoads</key>
-#      <true/>
-#   </dict>
+```swift
+<key>NSAppTransportSecurity</key>
+    <dict>
+    <key>NSAllowsArbitraryLoads</key>
+      <true/>
+  </dict>
+```
 
 ## Extending Functionality
 This brower class is a final class, and is not meant to be subclassed. Feel free, however, to extend it. At the end of the class is an extension with a sample public func that would change the navBar tint color if called.
