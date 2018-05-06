@@ -22,7 +22,12 @@ class FirstViewController: UIViewController {
   @IBAction func pushPageWithTitle(_ sender:Any) {
     pushBrowser(coversTabBar: true, title: "My Web Page")
   }
+    
   
+//*****************
+  //MARK: - 
+//*****************
+    
   
   func pushBrowser(coversTabBar:Bool = false, title:String = "")
   {
@@ -30,7 +35,7 @@ class FirstViewController: UIViewController {
     //If no page title is passed, the browswer will detect and present the title of the page
     //being downloaded
     
-    let browser = MPC_SwiftBrowserViewController(urlString: "http://www.latitudeios.com",
+    let browser = MPC_SwiftBrowserViewController(urlString: "https://asiatravelbug.net",
                                                   coversTabBar: coversTabBar,
                                                   pageTitle:title)
     
